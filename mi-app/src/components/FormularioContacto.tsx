@@ -5,7 +5,6 @@ export function FormularioContacto() {
   const [nombre, setNombre] = useState("");
   const [email, setEmail] = useState("");
   const [mensaje, setMensaje] = useState("");
-  const [enviado, setEnviado] = useState(false);
   const [resumen, setResumen] = useState<ResumenEnviado | null>(null);
 
   const emailOk = emailValido(email);
@@ -13,7 +12,6 @@ export function FormularioContacto() {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!emailOk) return;
-    setEnviado(true);
     setResumen({ nombre, email, mensaje });
     setNombre("");
     setEmail("");
