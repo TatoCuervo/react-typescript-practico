@@ -1,16 +1,12 @@
-import noticias from "./data/noticias.json";
-import { Noticia } from "./components/Noticia";
+import { Contador } from './components/Contador'
 
 function App() {
   return (
     <div>
-      <h1>Noticias</h1>
-      {noticias.length === 0 && <p>No hay noticias publicadas.</p>}
-      {noticias.map((noticia) => (
-        <Noticia key={noticia.id} noticia={noticia} />
-      ))}
+      <h1>useState</h1>
+      <Contador />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

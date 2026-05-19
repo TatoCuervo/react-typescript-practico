@@ -15,7 +15,6 @@ export function Noticia({ noticia }: NoticiaProps) {
     >
       <h2>{noticia.titulo}</h2>
       {noticia.id === "n1" && <p>{noticia.contenido}</p>}
-      <p>{/*noticia.contenido*/}</p>
     </article>
   );
 }
